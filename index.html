@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width" />
   <link href="assets/favicon.ico" rel="shortcut icon" />
   <link rel="stylesheet" href="css/owfont-regular.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -11,15 +11,18 @@
 <body>
   <header class="header">
     <div class="player">
+      <audio src=""></audio>
       <div class="player-controls">
         <button class="play-prev player-icon"></button>
-        <button class="play player-icon"></button>
+        <button class="play player-icon" id="play"></button>
         <button class="play-next player-icon"></button>
       </div>
-      <ul class="play-list"></ul>
+      <ul class="play-list">
+        <!--<li><audio src="" controls></audio></li>-->
+      </ul>
     </div>
     <div class="weather">
-      <input type="text" class="city" />
+      <input type="text" class="city" placeholder="Enter city"/>
       <i class="weather-icon owf"></i>
       <div class="weather-error"></div>
       <div class="description-container">
@@ -39,8 +42,11 @@
     <date class="date"></date>
     <div class="greeting-container">
       <span class="greeting"></span>
-      <input type="text" class="name" />
+      <input type="text" class="name" id="name" placeholder="Your name">
     </div>
+    <i class="weather-icon owf"></i>
+    <div class="temperature"></div>
+    <div class="weather-description"></div>
   </main>
   <footer class="footer">
     <button class="change-quote"></button>
@@ -49,6 +55,11 @@
       <div class="author"></div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script type = "module" src="js/timeDateGreeting.js"></script>
+  <script  src="js/weather.js"></script>
+  <script type = "module" src="js/quote.js"></script>
+  <script type = "module" src="js/background.js"></script>
+  <script type = "module" src = "js/music.js"></script>
+
 </body>
 </html>
