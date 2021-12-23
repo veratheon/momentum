@@ -9,6 +9,7 @@
   padding: 0;
 }
 
+
 body {
   min-width: 480px;
   min-height: 100vh;
@@ -16,12 +17,28 @@ body {
   font-size: 16px;
   color: #fff;
   text-align: center;
-  background: url("../assets/img/bg.jpg") center/cover, rgba(0, 0, 0, 0.5);
+  background: center/cover, rgba(0, 0, 0, 0.5);
+  background-image: url('../assets/img/bg.jpg');
   background-blend-mode: multiply;
   transition: background-image 1s ease-in-out;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
+li{
+  color: #fff;
+  padding-bottom: 11px;
+}
+
+.activLi{
+  color: red;
+}
+
+
+
 .header {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -165,6 +182,7 @@ body {
 }
 
 .main {
+  box-sizing: border-box;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -241,6 +259,7 @@ body {
 }
 
 .footer {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
